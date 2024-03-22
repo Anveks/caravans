@@ -42,6 +42,7 @@ export const ProductSchema = new mongoose.Schema({
 });
 
 export interface Product extends mongoose.Document {
+  _id: string,
   categoryId: mongoose.Types.ObjectId,
   name: string,
   description: string,

@@ -6,6 +6,7 @@ import { CategoriesModule } from './categories/categories.module';
 import { StatusesModule } from './statuses - delete later/statuses.module';
 import { UsersModule } from './users/users.module';
 import { ProductsModule } from './products/product.module';
+import { OrdersModule } from './orders/orders.module';
 
 @Module({
   imports: [ 
@@ -13,7 +14,8 @@ import { ProductsModule } from './products/product.module';
     CategoriesModule,
     StatusesModule,
     UsersModule,
-    ProductsModule
+    ProductsModule,
+    OrdersModule
   ],
   controllers: [AppController],
   providers: [AppService],
