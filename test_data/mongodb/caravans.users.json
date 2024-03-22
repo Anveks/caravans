@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "65fc46b608599667a0e4919a"
+  },
+  "name": "Alice",
+  "email": "alice@example.com",
+  "password": "password123",
+  "address": "123 Main St",
+  "type": "SUPER_ADMIN"
+},
+{
+  "_id": {
+    "$oid": "65fc46b608599667a0e4919b"
+  },
+  "name": "Bob",
+  "email": "bob@example.com",
+  "password": "password456",
+  "address": "456 Elm St",
+  "type": "ADMIN"
+},
+{
+  "_id": {
+    "$oid": "65fc46b608599667a0e4919c"
+  },
+  "name": "Charlie",
+  "email": "charlie@example.com",
+  "password": "password789",
+  "address": "789 Oak St",
+  "type": "USER"
+}]

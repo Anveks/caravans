@@ -11,7 +11,7 @@ export class OrdersService {
     let orders: Order[] = [];
     try {
       orders = await this.orderModel.find()
-      .populate({
+      .populate({ // populating the user field based on the id + relation in the schema
         path: 'userId',
         select: '_id name email'
       })

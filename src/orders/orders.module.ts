@@ -6,7 +6,7 @@ import { OrdersService } from "./orders.service";
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{
+    MongooseModule.forFeature([{ // importing the Schema
       name: "Order",
       schema: OrderSchema
     }]),

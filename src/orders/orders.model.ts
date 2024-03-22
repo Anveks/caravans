@@ -11,12 +11,12 @@ export const OrderSchema = new mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   userId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    ref: 'User', // creating relation with users collection
     required: true
   },
   productId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Product',
+    ref: 'Product', // creating relation with products collection
     required: true
   },
   creationDate: {

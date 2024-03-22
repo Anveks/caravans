@@ -1,0 +1,69 @@
+[{
+  "_id": {
+    "$oid": "65fc55c608599667a0e4919f"
+  },
+  "categoryId": {
+    "$oid": "65fc2918d092a467b974e170"
+  },
+  "name": "Luxury Caravan",
+  "description": "Experience luxury camping with our premium caravan.",
+  "creationDate": {
+    "$date": "2024-03-21T12:00:00.000Z"
+  },
+  "price": 50000,
+  "location": "123 Main St",
+  "metaData": {
+    "color": "Blue",
+    "size": "Large"
+  },
+  "status": "Available",
+  "userId": {
+    "$oid": "65fc55e908599667a0e491a4"
+  }
+},
+{
+  "_id": {
+    "$oid": "65fc55c608599667a0e491a0"
+  },
+  "categoryId": {
+    "$oid": "65fc2918d092a467b974e171"
+  },
+  "name": "Off-Road Adventure Caravan",
+  "description": "Embark on rugged off-road adventures with our durable caravan.",
+  "creationDate": {
+    "$date": "2024-03-21T12:00:00.000Z"
+  },
+  "price": 60000,
+  "location": "456 Elm St",
+  "metaData": {
+    "color": "Green",
+    "size": "Medium"
+  },
+  "status": "Available",
+  "userId": {
+    "$oid": "65fc46b608599667a0e4919b"
+  }
+},
+{
+  "_id": {
+    "$oid": "65fc55c608599667a0e491a1"
+  },
+  "categoryId": {
+    "$oid": "65fc2918d092a467b974e172"
+  },
+  "name": "Family-Friendly Caravan",
+  "description": "Enjoy quality family time with our spacious caravan.",
+  "creationDate": {
+    "$date": "2024-03-21T12:00:00.000Z"
+  },
+  "price": 70000,
+  "location": "789 Oak St",
+  "metaData": {
+    "color": "Red",
+    "size": "Large"
+  },
+  "status": "Available",
+  "userId": {
+    "$oid": "65fc46b608599667a0e4919c"
+  }
+}]

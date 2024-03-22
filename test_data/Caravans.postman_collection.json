@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "9304cea8-58f0-4185-a7bd-d6c368026536",
+		"name": "Caravans",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25520614"
+	},
+	"item": [
+		{
+			"name": "GET Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/products"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/orders"
+			},
+			"response": []
+		}
+	]
+}

@@ -6,7 +6,7 @@ import { ProductsService } from "./product.service";
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{
+    MongooseModule.forFeature([{ // importing the Schema
       name: 'Product',
       schema: ProductSchema,
     }]),

@@ -1,23 +1,19 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import {MongooseModule} from '@nestjs/mongoose'
+import { MongooseModule } from '@nestjs/mongoose';
 import { CategoriesModule } from './categories/categories.module';
-import { StatusesModule } from './statuses - delete later/statuses.module';
-import { UsersModule } from './users/users.module';
-import { ProductsModule } from './products/product.module';
 import { OrdersModule } from './orders/orders.module';
+import { ProductsModule } from './products/product.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [ 
-    MongooseModule.forRoot('mongodb://localhost:27017/caravans'),
+    MongooseModule.forRoot('mongodb://localhost:27017/caravans'), // connection string
     CategoriesModule,
-    StatusesModule,
     UsersModule,
     ProductsModule,
     OrdersModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

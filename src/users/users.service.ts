@@ -5,7 +5,7 @@ import { User } from "./users.model";
 
 @Injectable()
 export class UsersService {
-  constructor(@InjectModel("User") private readonly userModel: Model<User>){}  
+  constructor(@InjectModel("User") private readonly userModel: Model<User>){} // injecting the Schema  
 
   // get all
   async getAllUsers(){
@@ -14,7 +14,7 @@ export class UsersService {
       users = await this.userModel.find();
       return users;
     } catch (err: any) {
-      if (users.length === 0) throw new InternalServerErrorException("Error while fetching the users.")
+      if (users.length === 0) throw new InternalServerErrorException("Error while fetching the users."); // if no users found - throw a server err
     }
   };
 }

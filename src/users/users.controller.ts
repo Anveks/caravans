@@ -9,10 +9,10 @@ export class UsersController {
   @Get()
   async getUsers(): Promise<User[]> {
     try {
-      const result = await this.usersService.getAllUsers();
+      const result = await this.usersService.getAllUsers(); // getting all users
       return result;
     } catch(err: any) {
-      throw new InternalServerErrorException(err.message)
+      throw new InternalServerErrorException(err.message); // rethrow error message if occurs
     }
   }
 };

@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "65fc2918d092a467b974e170"
+  },
+  "name": "Luxury Caravans",
+  "description": "Explore our range of luxury caravans equipped with top-notch amenities for an extravagant camping experience.",
+  "creationDate": {
+    "$date": "2024-03-21T12:00:00.000Z"
+  },
+  "isEnable": true
+},
+{
+  "_id": {
+    "$oid": "65fc2918d092a467b974e171"
+  },
+  "name": "Off-Road Caravans",
+  "description": "Discover rugged off-road caravans built to withstand the toughest terrains, perfect for adventurous travelers.",
+  "creationDate": {
+    "$date": "2024-03-21T12:00:00.000Z"
+  },
+  "isEnable": true
+},
+{
+  "_id": {
+    "$oid": "65fc2918d092a467b974e172"
+  },
+  "name": "Family-Friendly Caravans",
+  "description": "Find spacious and family-friendly caravans designed to accommodate large families, making your camping trips memorable and enjoyable.",
+  "creationDate": {
+    "$date": "2024-03-21T12:00:00.000Z"
+  },
+  "isEnable": true
+}]

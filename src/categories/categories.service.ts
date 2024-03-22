@@ -7,7 +7,7 @@ import { Category } from "./categories.model";
 export class CategoriesService {
   constructor(
     @InjectModel('Category') private readonly categoryModel: Model<Category>
-  ){}
+  ){} // injecting the categories Schema
 
   // getting all categories:
   async getAllCategories(): Promise<Category[]>{
@@ -16,7 +16,7 @@ export class CategoriesService {
       categories = await this.categoryModel.find();
       return categories;
     } catch (err: any) {
-      if (categories.length === 0) throw new InternalServerErrorException('Error while fetching categories');
+      if (categories.length === 0) throw new InternalServerErrorException('Error while fetching categories'); // throw server err if there is no categories
     };
   }
 

@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "65fd3eff41a98f2952c6fd69"
+  },
+  "userId": {
+    "$oid": "65fc46b608599667a0e4919a"
+  },
+  "productId": {
+    "$oid": "65fc55c608599667a0e4919f"
+  },
+  "creationDate": {
+    "$date": "2024-03-21T12:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65fd3eff41a98f2952c6fd6a"
+  },
+  "userId": {
+    "$oid": "65fc46b608599667a0e4919b"
+  },
+  "productId": {
+    "$oid": "65fc55c608599667a0e491a0"
+  },
+  "creationDate": {
+    "$date": "2024-03-22T12:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65fd3eff41a98f2952c6fd6b"
+  },
+  "userId": {
+    "$oid": "65fc46b608599667a0e4919c"
+  },
+  "productId": {
+    "$oid": "65fc55c608599667a0e491a0"
+  },
+  "creationDate": {
+    "$date": "2024-03-23T12:00:00.000Z"
+  }
+}]

@@ -6,7 +6,7 @@ import { CategoriesService } from "./categories.service";
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{
+    MongooseModule.forFeature([{ // importing schema
       name: 'Category',
       schema: CategorySchema
     }])

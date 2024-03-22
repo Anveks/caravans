@@ -17,26 +17,26 @@ import { StatusEnum } from './status.enum';
 
 export const ProductSchema = new mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  categoryId: { 
+  categoryId: {
     type: mongoose.Schema.Types.ObjectId, 
-    ref: 'Category',
+    ref: 'Category', // creating relation with categories collection
     required: true 
   },
   name: { type: String, required: true },
   description: { type: String, required: true },
   creationDate: { type: Date, default: Date.now, required: true },
-  price: { type: Number, required: true }, // Change to Number for price
+  price: { type: Number, required: true },
   location: { type: String, required: true },
-  metaData: { type: Map, of: String }, // Use Map for metaData
+  metaData: { type: Map, of: String }, // using Map for metaData (for example, we store here size and color data)
   status: { 
     type: String, 
-    enum: StatusEnum, // Assuming these are the possible statuses
+    enum: StatusEnum, // getting the possible statuses from the status enum
     required: true,
     default: StatusEnum.AVAILABLE
   },
   userId: { 
     type: mongoose.Schema.Types.ObjectId, 
-    ref: 'User', // Assuming there's a User model
+    ref: 'User', // creating relation with users collection
     required: true 
   }
 });

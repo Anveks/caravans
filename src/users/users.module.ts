@@ -8,7 +8,7 @@ import { UsersService } from "./users.service";
   imports: [
     MongooseModule.forFeature([{
       name: 'User',
-      schema: UserSchema
+      schema: UserSchema // importing the UserSchema that we inject in service
     }])
   ],
   controllers: [
