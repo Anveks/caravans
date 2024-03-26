@@ -13,7 +13,7 @@
 // }
 
 import * as mongoose from 'mongoose';
-import { StatusEnum } from './status.enum';
+import { StatusEnum } from '../shared/enums/status.enum';
 
 export const ProductSchema = new mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
