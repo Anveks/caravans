@@ -1,7 +1,7 @@
 import { Injectable, InternalServerErrorException } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import mongoose, { Model } from "mongoose";
-import { User } from "./users.model";
+import { User } from "../shared/models/users.model";
 import { UserType } from "src/shared/enums/user_type.enum";
 
 @Injectable()
@@ -46,8 +46,21 @@ export class UsersService {
   }
 
   // update
-  async update(updatedUser): Promise<User>{
-    return null;
+  async update(id: string, updatedUser: { name: string, email: string, password: string, address: string }): Promise<User>{
+    const result = await this.userModel.findByIdAndUpdate(
+      { _id: id }, 
+      updatedUser, 
+      { new: true }) // returning the updated document as a response 
+      .exec();
+    return result;
+  }
+
+  async delete(id: string): Promise<{status: number, message: string}> {
+    const result = await this.userModel.deleteOne({ _id: id });
+    if (result.deletedCount !== 0) {
+      return { status: 200, message: "Delete successfull!" };
+    }
+    
   }
 
 }

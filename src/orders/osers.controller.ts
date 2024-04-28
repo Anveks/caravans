@@ -1,6 +1,6 @@
 import { Controller, Get, InternalServerErrorException } from "@nestjs/common";
 import { OrdersService } from "./orders.service";
-import { Order } from "./orders.model";
+import { Order } from "../shared/models/orders.model";
 
 @Controller('/orders')
 export class OrdersController {

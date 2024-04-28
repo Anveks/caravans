@@ -1,6 +1,6 @@
 import { Controller, Get, InternalServerErrorException } from "@nestjs/common";
 import { CategoriesService } from "./categories.service";
-import { Category } from "./categories.model";
+import { Category } from "../shared/models/categories.model";
 
 @Controller('/categories')
 export class CategoriesController {

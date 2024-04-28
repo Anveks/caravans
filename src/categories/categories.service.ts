@@ -1,7 +1,7 @@
 import { Injectable, InternalServerErrorException } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
-import { Category } from "./categories.model";
+import { Category } from "../shared/models/categories.model";
 
 @Injectable()
 export class CategoriesService {

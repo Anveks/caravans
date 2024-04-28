@@ -1,6 +1,6 @@
-import { Body, Controller, Get, InternalServerErrorException, Param, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, InternalServerErrorException, Param, Patch, Post, Put } from "@nestjs/common";
 import { UsersService } from "./users.service";
-import { User } from "./users.model";
+import { User } from "../shared/models/users.model";
 
 @Controller('/users')
 export class UsersController {
@@ -53,8 +53,9 @@ export class UsersController {
     return user;
   };
 
-  @Put()
+  @Patch("/:id")
   async update(
+    @Param('id') id: string,
     @Body("name") name: string,
     @Body("email") email: string,
     @Body("password") password: string,
@@ -66,7 +67,15 @@ export class UsersController {
       password: password,
       address: address
     };
-    const result = await this.usersService.update(updatedUserObj);
+    const result = await this.usersService.update(id, updatedUserObj);
+    return result;
+  }
+
+  @Delete("/:id")
+  async delete(
+    @Param("id") id: string
+  ): Promise<{status: number, message: string}> {
+    const result = await this.usersService.delete(id);
     return result;
   }
 

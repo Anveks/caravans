@@ -8,7 +8,7 @@
 // }
 
 import * as mongoose from 'mongoose';
-import { UserType } from '../shared/enums/user_type.enum';
+import { UserType } from '../enums/user_type.enum';
 
 // a custom validation function for password format
 function validatePassword(password: string): boolean {
