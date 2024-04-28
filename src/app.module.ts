@@ -4,6 +4,8 @@ import { CategoriesModule } from './categories/categories.module';
 import { OrdersModule } from './orders/orders.module';
 import { ProductsModule } from './shared/models/product.module';
 import { UsersModule } from './users/users.module';
+import { APP_FILTER } from '@nestjs/core';
+import { AllExceptionsFilter } from './shared/middleware/all-exceptions.filter';
 
 @Module({
   imports: [ 
@@ -14,6 +16,11 @@ import { UsersModule } from './users/users.module';
     OrdersModule
   ],
   controllers: [],
-  providers: [],
+  providers: [
+    {
+      provide: APP_FILTER,
+      useClass: AllExceptionsFilter,
+    }
+  ],
 })
 export class AppModule {}

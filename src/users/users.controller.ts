@@ -1,6 +1,7 @@
-import { Body, Controller, Delete, Get, InternalServerErrorException, Param, Patch, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, InternalServerErrorException, Param, Patch, Post, Put, Req } from "@nestjs/common";
 import { UsersService } from "./users.service";
 import { User } from "../shared/models/users.model";
+import { RouteNotFoundError } from "src/shared/models/error.models";
 
 @Controller('/users')
 export class UsersController {
@@ -78,5 +79,15 @@ export class UsersController {
     const result = await this.usersService.delete(id);
     return result;
   }
+
+  @Get("*")
+  notFound(
+    @Req() request: Request
+  ) {
+    const route = request.url;
+    console.log(route);
+    console.log('ROUTE NOT FOUND REACHED 🔥🔥🔥');
+    throw new RouteNotFoundError(route);
+  };
 
 };
