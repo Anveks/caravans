@@ -60,14 +60,18 @@ export class UsersController {
     @Body("name") name: string,
     @Body("email") email: string,
     @Body("password") password: string,
-    @Body("address") address: string
+    @Body("address") address: string,
+    @Body("type") type: number,
   ): Promise<User> {
     const updatedUserObj = {
       name: name,
       email: email,
       password: password,
-      address: address
+      address: address,
+      type: type
     };
+    console.log(updatedUserObj);
+    
     const result = await this.usersService.update(id, updatedUserObj);
     return result;
   }
@@ -79,15 +83,5 @@ export class UsersController {
     const result = await this.usersService.delete(id);
     return result;
   }
-
-  @Get("*")
-  notFound(
-    @Req() request: Request
-  ) {
-    const route = request.url;
-    console.log(route);
-    console.log('ROUTE NOT FOUND REACHED 🔥🔥🔥');
-    throw new RouteNotFoundError(route);
-  };
 
 };

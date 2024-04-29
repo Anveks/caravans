@@ -23,7 +23,7 @@ export class RouteNotFoundError extends ClientError {
 
 // Resource not found error:
 export class ResourceNotFoundError extends ClientError {
-  constructor(email: string, message?: string) {
+  constructor(email?: string, message?: string) {
     super(
       HttpStatus.NOT_FOUND,
       message || `User with email ${email} not found.`
